@@ -22,6 +22,17 @@ class Main extends Component {
   }
 
   render() {
+    const modalStyles = {
+      content: {
+        backgroundColor: 'red',
+        color: 'blue',
+      },
+      overlay: {
+        color: 'green',
+        backgroundColor: 'rgba(0,0,0,.5)',
+      },
+    };
+
     return (
       <div className="Main">
         <h3>Main component.</h3>
@@ -31,6 +42,7 @@ class Main extends Component {
           isOpen={this.state.modalIsOpen}
           onRequestClose={::this.closeModal}
           contentLabel="警告"
+          style={modalStyles}
         >
           <h2>這是跳窗</h2>
           <button onClick={::this.closeModal}>關閉它！</button>

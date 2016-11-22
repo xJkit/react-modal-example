@@ -26,11 +26,15 @@ class Main extends Component {
       <div className="Main">
         <h3>Main component.</h3>
         <h3>Press the button to show modals</h3>
-        <button onClick={evt => this.showModal(evt)}>show modal</button>
+        <button onClick={::this.showModal}>打開跳窗</button>
         <Modal
           isOpen={this.state.modalIsOpen}
+          onRequestClose={::this.closeModal}
           contentLabel="警告"
-        />
+        >
+          <h2>這是跳窗</h2>
+          <button onClick={::this.closeModal}>關閉它！</button>
+        </Modal>
       </div>
     );
   }

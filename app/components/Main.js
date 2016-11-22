@@ -26,9 +26,14 @@ class Main extends Component {
       content: {
         backgroundColor: 'red',
         color: 'blue',
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
       },
       overlay: {
-        color: 'green',
         backgroundColor: 'rgba(0,0,0,.5)',
       },
     };

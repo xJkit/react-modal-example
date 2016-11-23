@@ -14,14 +14,10 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    root: __dirname,
-    modulesDirectories: [
-      'node_modules',
-      'app/components',
-    ],
+    root: path.join(__dirname, 'app'),
     alias: {
-      applicationStyles: 'app/styles/app.scss',
-      routes: path.join('app', 'routes.js'),
+      applicationStyles: 'styles/app.scss',
+      routes: 'routes.js',
     },
     extensions: ['', '.js', '.jsx'],
   },

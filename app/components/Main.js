@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
+import NavBar from './NavBar';
 // Modals
 // import 'style!css!rodal/lib/rodal.css';
+import AboutModal from './Modal/aboutModal';
 
 
 class Main extends Component {
@@ -9,9 +10,10 @@ class Main extends Component {
   render() {
     return (
       <div className="Main">
-        <h3>Main component.</h3>
-        <h3>Press the button to show modals</h3>
+        <NavBar />
         <hr />
+        <h1>這是首頁</h1>
+        <AboutModal />
       </div>
     );
   }

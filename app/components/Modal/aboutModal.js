@@ -14,11 +14,12 @@ class aboutModal extends Component {
   };
 
   render() {
-    const { aboutModalVisible: visible, showModal, hideModal } = this.props;
+    const { aboutModalVisible: visible, hideModal } = this.props;
     return (
       <div className="about-modal">
         <Rodal visible={visible} onClose={hideModal}>
-          <h1>超酷炫 Rodal!</h1>
+          <h1>關於我：</h1>
+          <p>I am Jay, a JavaScript developer, recently working on React propject.</p>
         </Rodal>
       </div>
     );

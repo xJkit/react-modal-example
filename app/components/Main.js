@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 // import 'style!css!rodal/lib/rodal.css';
 import AboutModal from './Modal/aboutModal';
 import LoginModal from './Modal/loginModal';
-
+import RegisterModal from './Modal/registerModal';
 
 class Main extends Component {
 
@@ -16,6 +16,7 @@ class Main extends Component {
         <h1>這是首頁</h1>
         <AboutModal />
         <LoginModal />
+        <RegisterModal />
       </div>
     );
   }

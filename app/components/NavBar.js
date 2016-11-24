@@ -6,15 +6,12 @@ class Navbar extends Component {
 
   static propTypes = {
     showAboutModal: PropTypes.func,
-    hideAboutModal: PropTypes.func,
     showLoginModal: PropTypes.func,
-    hideLoginModal: PropTypes.func,
-    aboutModalVisible: PropTypes.bool,
-    loginModalVisible: PropTypes.bool,
+    showRegisterModal: PropTypes.func,
   };
 
   render() {
-    const { showAboutModal, showLoginModal } = this.props;
+    const { showAboutModal, showLoginModal, showRegisterModal } = this.props;
     return (
       <div className="nav-bar">
         <ul>
@@ -25,7 +22,7 @@ class Navbar extends Component {
             <button onClick={showLoginModal}>登入</button>
           </li>
           <li>
-            <button>註冊</button>
+            <button onClick={showRegisterModal}>註冊</button>
           </li>
         </ul>
       </div>
@@ -33,16 +30,10 @@ class Navbar extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  aboutModalVisible: state.aboutModalVisible,
-  loginModalVisible: state.loginModalVisible,
-});
-
 const mapDispatchToProps = {
   showAboutModal: actions.about.showModal,
-  hideAboutModal: actions.about.hideModal,
   showLoginModal: actions.login.showModal,
-  hideLoginModal: actions.login.hideModal,
+  showRegisterModal: actions.register.showModal,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default connect(() => ({}), mapDispatchToProps)(Navbar);

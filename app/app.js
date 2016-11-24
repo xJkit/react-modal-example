@@ -8,6 +8,7 @@ import routes from './routes';
 
 // Load custom css: app.scss
 import 'style!css!sass!applicationStyles';
+import 'style!css!rodal/lib/rodal.css';
 
 render(
   <Provider store={configureStore()}>

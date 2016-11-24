@@ -3,23 +3,25 @@ import { connect } from 'react-redux';
 import * as actions from 'actions/about';
 import Rodal from 'rodal';
 
-import 'style!css!rodal/lib/rodal.css';
+// import 'style!css!rodal/lib/rodal.css';
 
 class aboutModal extends Component {
 
   static propTypes = {
-    aboutModalVisible: PropTypes.bool,
+    visible: PropTypes.bool,
     showModal: PropTypes.func,
     hideModal: PropTypes.func,
   };
 
   render() {
-    const { aboutModalVisible: visible, hideModal } = this.props;
+    const { visible, hideModal } = this.props;
     return (
       <div className="about-modal">
         <Rodal visible={visible} onClose={hideModal}>
           <h1>關於我：</h1>
+          <hr />
           <p>I am Jay, a JavaScript developer, recently working on React propject.</p>
+          <button className="button" onClick={hideModal}>關閉</button>
         </Rodal>
       </div>
     );
@@ -27,7 +29,7 @@ class aboutModal extends Component {
 }
 
 const mapStateToProps = state => ({
-  aboutModalVisible: state.aboutModalVisible,
+  visible: state.aboutModalVisible,
 });
 
 const mapDispatchToProps = {

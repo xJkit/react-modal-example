@@ -14,6 +14,7 @@ class Main extends Component {
         <NavBar />
         <hr />
         <h1>這是首頁</h1>
+        <p>請點擊上方選單呼叫 Modal </p>
         <AboutModal />
         <LoginModal />
         <RegisterModal />

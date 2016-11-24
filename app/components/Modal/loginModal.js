@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from 'actions';
 import Rodal from 'rodal';
 
+
 class loginModal extends Component {
 
   static propTypes = {
@@ -14,8 +15,18 @@ class loginModal extends Component {
     const { visible, hideModal } = this.props;
     return (
       <div className="login-modal">
-        <Rodal visible={visible} onClose={hideModal}>
+        <Rodal visible={visible} onClose={hideModal} animation="door">
           <h1>登入</h1>
+          <hr />
+          <form>
+            <label htmlFor="name">姓名</label>
+            <input type="text" id="name" />
+            <br />
+            <label htmlFor="phone">電話</label>
+            <input type="text" id="phone" />
+            <br />
+            <button>提交</button>
+          </form>
         </Rodal>
       </div>
     );
